@@ -8,7 +8,11 @@ const taskRoutes = require('./routes/tasks');
 
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://vishal-task-manager.netlify.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 app.use('/api/auth', authRoutes);
