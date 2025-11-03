@@ -23,7 +23,7 @@ app.get('/api/protected', auth, (req, res) => {
 });
 
 app.get("/",(req,res)=>{
-    res.send("Home page");
+    res.send("Backend APIs of Task Management System is Running");
 })
 
 app.listen(process.env.PORT,()=>{
